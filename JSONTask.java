@@ -21,6 +21,19 @@ interface JSONFetching
 {
     void didFetch(JSONArray jsonArray);
 }
+
+/*
+	Class sem notar JSONTask verður að implementa JSONFetching
+	DAEMI:
+		Class JSONTaskUserActivity implements JSONFetching 
+		{
+			public ... onCreate()
+			{
+				JSONTask task = new JSONTask(this);
+				task.execute("http://myurl.com/json");
+			}
+		}
+*/
 public class JSONTask extends AsyncTask<String,String,String>
 {
     private JSONFetching updater;
